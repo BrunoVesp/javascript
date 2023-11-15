@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Condições</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    De que país você é? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resultado">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtpais = window.document.querySelector('input#txtpais')
+            var resultado = window.document.querySelector('div#resultado')
+            var pais = txtpais.value
+            if (pais == "Brasil") {
+                resultado.innerHTML = `<p>Você é de <strong>${pais}</strong> e é <strong>BRASILEIRO</strong></p>`
+            } else {
+                resultado.innerHTML = `<p>Você é de <strong>${pais}</strong> e é <strong>ESTRANGEIRO</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
